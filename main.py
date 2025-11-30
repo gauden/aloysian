@@ -15,7 +15,7 @@ def main():
     word_list = load_data()
     
     user_input = st.text_input("Enter a regex pattern to search for words:")
-    user_input = user_input.strip().replace("-", ".")
+    user_input = user_input.strip().replace("-", ".").replace(" ", "").replace('"', "")
 
     if user_input:
         try:
